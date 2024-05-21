@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://3hlm660meruy"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_80a2c"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qj4py"]
+radius = 0.398382
+height = 2.01069
+
+[node name="player" type="CharacterBody3D"]
+script = ExtResource("1_80a2c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+shape = SubResource("CapsuleShape3D_qj4py")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
